@@ -1,0 +1,28 @@
+<header class="site-header">
+
+  <div class="wrapper">
+    <div class="profile-img-wrapper">
+      <img class="profile-img" src="{{site.author_image}}" alt="Andrew Hansen - Developer" />
+    </div>
+    <div class="site-title">
+      <p>Andrew Hansen</p>
+      <p class="site-subtitle">Web Developer. Web Advocate.</p>  
+    </div>
+    <div class="twitter-follow-wrapper">
+      <a href="https://twitter.com/arahansen" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false"></a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </div>
+
+    <nav class="site-nav">
+      <ul>
+        <li><a class="page-link" href="/">Blog</a></li>
+        {% for my_page in site.pages %}
+          {% if my_page.title %}
+          <li><a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+
+</header>
